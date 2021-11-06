@@ -5,7 +5,7 @@ This is a **starter template for a React.js project**, configured with **Create-
 ### Setup 📦
 
 ```
-npx create-react-app <YOUR_APP_NAME> --template cra-tailwind-typescript
+npx create-react-app <YOUR_APP_NAME> --template tailwind-typescript
 ```
 
 ### Configuring tailwind ⚙️
