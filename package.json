@@ -3,30 +3,36 @@
   "author": "captain-woof",
   "license": "MIT",
   "repository": "https://github.com/captain-woof/cra-template-tailwind-ts.git",
+  "main": "template.json",
+  "files": [
+    "template",
+    "template.json"
+  ],
   "description": "A starter template for a React.js project, configured with Create-React-App, Tailwind (jit) and Typescript.",
-  "version": "1.0.0",
-  "keywords": ["create-react-app","tailwindcss","tailwind","react tailwind","cra-template-tailwind-ts","react with tailwind jit","tailwindcss jit"],
+  "version": "1.0.3",
+  "keywords": [
+    "create-react-app",
+    "tailwindcss",
+    "tailwind",
+    "react tailwind",
+    "cra-template-tailwind-ts",
+    "react with tailwind jit",
+    "tailwindcss jit"
+  ],
   "private": false,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "typescript": "^4.1.2"
   },
   "scripts": {
+    "prepublish": "rm -rf ./template/public ./template/src ./template/tailwind* ./template/tsconfig.json && cp -a ./src/. template/src && cp -a ./public/. template/public && cp -a tailwind* ./template && cp tsconfig.json ./template",
     "dev": "yarn start",
     "start": "concurrently -k \"react-scripts start\" \"yarn dev:css\"",
-    "build": "yarn build:css && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "build:css": "npx tailwindcss --input ./tailwind.css --output ./src/styles/index.css",
     "dev:css": "npx tailwindcss --input ./tailwind.css --output ./src/styles/index.css -w",
     "serve": "npx serve -s build/"

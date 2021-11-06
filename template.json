@@ -1,0 +1,30 @@
+{
+  "package": {
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-scripts": "4.0.3"
+    },
+    "devDependencies": {
+      "typescript": "^4.1.2",
+      "@types/node": "^12.0.0",
+      "@types/react": "^17.0.0",
+      "@types/react-dom": "^17.0.0",
+      "autoprefixer": "^10.4.0",
+      "concurrently": "^6.3.0",
+      "postcss": "8",
+      "serve": "^13.0.2",
+      "tailwindcss": "^2.2.19"
+    },
+    "scripts": {
+      "dev": "yarn start",
+      "start": "concurrently -k \"react-scripts start\" \"yarn dev:css\"",
+      "build": "yarn build:css && react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "build:css": "npx tailwindcss --input ./tailwind.css --output ./src/styles/index.css",
+      "dev:css": "npx tailwindcss --input ./tailwind.css --output ./src/styles/index.css -w",
+      "serve": "npx serve -s build/"
+    }
+  }
+}
