@@ -3,6 +3,7 @@
   "author": "captain-woof",
   "license": "MIT",
   "repository": "https://github.com/captain-woof/cra-template-tailwind-typescript.git",
+  "description": "A starter template for a React.js project, configured with Create-React-App, Tailwind (jit) and Typescript.",
   "version": "1.0.0",
   "keywords": ["create-react-app","tailwindcss","tailwind","react tailwind","cra-tailwind-typescript","react with tailwind jit","tailwindcss jit"],
   "private": false,
