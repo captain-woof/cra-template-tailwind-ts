@@ -9,7 +9,7 @@
     "template.json"
   ],
   "description": "A starter template for a React.js project, configured with Create-React-App, Tailwind (jit) and Typescript.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "create-react-app",
     "tailwindcss",
