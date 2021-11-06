@@ -1,11 +1,11 @@
-# cra-template-tailwind-typescript
+# cra-template-tailwind-ts
 
 This is a **starter template for a React.js project**, configured with **Create-React-App**, **Tailwind** and **Typescript**.
 
 ### Setup 📦
 
 ```
-npx create-react-app <YOUR_APP_NAME> --template tailwind-typescript
+npx create-react-app <YOUR_APP_NAME> --template tailwind-ts
 ```
 
 ### Configuring tailwind ⚙️
