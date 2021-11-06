@@ -1,0 +1,58 @@
+{
+  "name": "tailwind-typescript",
+  "author": "captain-woof",
+  "license": "MIT",
+  "repository": "https://github.com/captain-woof/cra-template-tailwind-typescript.git",
+  "version": "1.0.0",
+  "keywords": ["create-react-app","tailwindcss","tailwind","react tailwind","cra-tailwind-typescript","react with tailwind jit","tailwindcss jit"],
+  "private": false,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "dev": "yarn start",
+    "start": "concurrently -k \"react-scripts start\" \"yarn dev:css\"",
+    "build": "yarn build:css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:css": "npx tailwindcss --input ./tailwind.css --output ./src/styles/index.css",
+    "dev:css": "npx tailwindcss --input ./tailwind.css --output ./src/styles/index.css -w",
+    "serve": "npx serve -s build/"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "concurrently": "^6.3.0",
+    "postcss": "8",
+    "serve": "^13.0.2",
+    "tailwindcss": "^2.2.19"
+  }
+}
